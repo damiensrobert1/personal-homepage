@@ -1,4 +1,4 @@
-<link href="resources/css/reset.css" type="text/css" rel="stylesheet">
+link href="resources/css/reset.css" type="text/css" rel="stylesheet">
 <br>
 <br>
 
@@ -7,9 +7,19 @@ Include fonts from local server
 @font-face {
   font-family: "Trickster";
   src:
-    local("Trickster"),
+    local("Trickster"), 
     url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
     url("trickster-outline.otf") format("opentype"),
     url("trickster-outline.woff") format("woff");
 }
+
+<br>
+<br>
+
+.breadcrumb li+li::before
+
+The + is called the adjacent sibling combinator; it will only select two li‘s when they are immediately next to each other, with the same parent. The element that actually gets selected is the second element of this sibling pair.
+
+The ::before part of this selector creates a pseudo-element. The ::before pseudo-element is often used with the content property, to add content that will be displayed just before the selected element.
+
 
