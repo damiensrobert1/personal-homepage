@@ -1,9 +1,18 @@
-link href="resources/css/reset.css" type="text/css" rel="stylesheet">
-<br>
-<br>
+<!DOCTYPE html>
 
-Include fonts from local server
+<html>
+  <head>
+    <title>Css Theory - Reminder</title>
+    <link href="../../../resources/css/reset.css" type="text/css" rel="stylesheet">
+    <link href="../../../resources/css/style.css" type="text/css" rel="stylesheet">
 
+  </head>
+  <body>
+    <h1>CSS Theory - Reminder</h1>
+    <h2>Include link</h2>
+      <blockquote>&lt;link href="resources/css/reset.css" type="text/css" rel="stylesheet"&gt;</blockquote>
+    <h2>Include fonts</h2>
+      <blockquote>
 @font-face {
   font-family: "Trickster";
   src:
@@ -11,15 +20,13 @@ Include fonts from local server
     url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
     url("trickster-outline.otf") format("opentype"),
     url("trickster-outline.woff") format("woff");
+    url("trickster-outline.ttf") format("truetype");
 }
+      </blockquote>
+    <h2>Insert the + operator for css</h2>
+      <p>The + is called the adjacent sibling combinator; it will only select two li‘s when they are immediately next to each other, with the same parent. The element that actually gets selected is the second element of this sibling pair.</p>
 
-<br>
-<br>
-
-.breadcrumb li+li::before
-
-The + is called the adjacent sibling combinator; it will only select two li‘s when they are immediately next to each other, with the same parent. The element that actually gets selected is the second element of this sibling pair.
-
-The ::before part of this selector creates a pseudo-element. The ::before pseudo-element is often used with the content property, to add content that will be displayed just before the selected element.
-
-
+    <h2>Insert the before selector</h2>
+    <p>The ::before part of this selector creates a pseudo-element. The ::before pseudo-element is often used with the content property, to add <strong>content</strong> that will be displayed just before the selected element.</p>
+  </body>
+</html>
