@@ -52,8 +52,58 @@
         <li>align-items</li>
         <li>align-content</li>
       </ol>
-      </section>
+      flex-start — all items will be positioned in order, starting from the left of the parent container, with no extra space between or before them.</p>
+    flex-end — all items will be positioned in order, with the last item starting on the right side of the parent container, with no extra space between or after them.
+    center — all items will be positioned in order, in the center of the parent container with no extra space before, between, or after them.
+    space-around — items will be positioned with equal space before and after each item, resulting in double the space between elements.
+    space-between — items will be positioned with equal space between them, but no extra space before the first or after the last elements.
 
+    The main axis and cross axis are interchangeable. We can switch them using the flex-direction property. If we add the flex-direction property and give it a value of column, the flex items will be ordered vertically, not horizontally.
+
+    The flex-direction property can accept four values:
+
+    row — elements will be positioned from left to right across the parent element starting from the top left corner (default).
+    row-reverse — elements will be positioned from right to left across the parent element starting from the top right corner.
+    column — elements will be positioned from top to bottom of the parent element starting from the top left corner.
+    column-reverse — elements will be positioned from the bottom to the top of the parent element starting from the bottom left corner.
+
+      </section>
+      <section>
+      <h2>Grid</h2>
+        <h3>grid container</h3>
+          <p>display: grid or display: inline-grid</p>
+          <p>grid-template-columns</p>
+          <p>grid-template-rows</p>
+          <p>fraction. Exemple: 1fr</p>
+          <p>repeat et minmax</p>
+	  The align-items property is used on a grid container. It’s used to determine how the grid items are spread out along the column by setting the default align-self property for all child grid items.
+
+The value start aligns grid items to the top side of the grid area.
+The value end aligns grid items to the bottom side of the grid area.
+The value center aligns grid items to the center of the grid area.
+The value stretch stretches all items to fill the grid area.
+
+
+Align Content
+
+Some times the total size of the grid items can be smaller than the grid container. If this is the case, the CSS property align-content can be used to position the entire grid along the column axis of the grid container.
+
+The property is declared on the grid container.
+The value start aligns the grid to the top of the grid container.
+The value end aligns the grid to the bottom of the grid container.
+The value center centers the grid vertically in the grid container.
+The value stretch stretches the grid items to increase the size of the grid to expand vertically across the container.
+The value space-around includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element.
+The value space-between includes an equal amount of space between grid items and no space at either end.
+The value space-evenly places an even amount of space between grid items and at either end.
+        <h3>grid items</h3>
+          <p>grid-area is: grid-row-start, grid-column-start, grid-row-end, grid-column-end.</p>
+	  <p>span</p>
+	  <p>grid-gap</p>
+	<h3>auto rows and columns</h3>
+	  <p>grid-auto-rows</p>
+	  <p>grid-auto-columns</p>
+      </section>
     </main>
   </body>
 </html>
