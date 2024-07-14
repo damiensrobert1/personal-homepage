@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Damiens ROBERT - professionel</title>
+    <link href="resources/css/reset.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <h2>this keyword</h2>
+      <p>When inside of a method of a javascript object, use <strong>this</strong> to access properties of the object.</p>
+      <p>this keyword doesn't work with arrow notation</p>
+    <h2>getter and setter</h2>
+      <pre>
+const robot = {
+  _model: '1E78V2',
+  _numOfSensors: 15,
+  get numOfSensors(){
+    if(typeof this._numOfSensors === 'number'){
+      return this._numOfSensors;
+    } else {
+      return 'Sensors are currently down.'
+    }
+  },
+  set numOfSensors(num) {
+    if (typeof num === "number") {
+      if ( num &gt;= 0) {
+        this._numOfSensors = num;
+      } else {
+        return 'Pass in a number that is greater than or equal to 0';
+      }
+    } else {
+      return 'Pass in a number that is greater than or equal to 0';
+    }
+  }
+};
+
+robot.numOfSensors = 100;
+
+console.log(robot.numOfSensors);
+      </pre>
+  </body>
+</html>
