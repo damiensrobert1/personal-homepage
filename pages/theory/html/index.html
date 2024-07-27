@@ -32,6 +32,126 @@
         <h2>Mod&eagrave;le d&apos;une box</h2>
         <p>content &gt; padding &gt; border &gt; margin</p>
       </section>
+      <section>
+      <h2>Mod&eagrave;le d&apos;une box</h2>
+	<pre>
+&st;form action="/example.html" method="POST"&gt;
+  &st;label for="username"&gt;Username&st;/label&gt;
+  &st;input type="text" name="username" value="Davie"&gt;
+&st;/form&gt;
+	</pre>
+	<h3>Input types :</h3>
+	text
+	password
+	number
+	  step
+	range
+          min attribute to "0".
+          max attribute to "5".
+          step attribute to "0.5".
+        checkbox
+	  <pre>
+<form>
+  <p>Choose your pizza toppings:</p>
+  <label for="cheese">Extra cheese</label>
+  <input id="cheese" name="topping" type="checkbox" value="cheese">
+  <br>
+  <label for="pepperoni">Pepperoni</label>
+  <input id="pepperoni" name="topping" type="checkbox" value="pepperoni">
+  <br>
+  <label for="anchovy">Anchovy</label>
+  <input id="anchovy" name="topping" type="checkbox" value="anchovy">
+</form>
+	  </pre>
+there are assigned values to the value attribute of the checkboxes. These values are not visible on the form itself, that’s why it is important that we use an associated <label> to identify the checkbox.
+each <input> has the same value for the name attribute. Using the same name for each checkbox groups the <input>s together. However, each <input> has a unique id to pair with a <label>
+
+	radio
+	  <pre>
+<form>
+  <p>What is sum of 1 + 1?</p>
+  <input type="radio" id="two" name="answer" value="2">
+  <label for="two">2</label>
+  <br>
+  <input type="radio" id="eleven" name="answer" value="11">
+  <label for="eleven">11</label>
+</form>
+
+	  </pre>
+
+	  dropdown list
+	   <pre>
+<form>
+  <label for="lunch">What's for lunch?</label>
+  <select id="lunch" name="lunch">
+    <option value="pizza">Pizza</option>
+    <option value="curry">Curry</option>
+    <option value="salad">Salad</option>
+    <option value="ramen">Ramen</option>
+    <option value="tacos">Tacos</option>
+  </select>
+</form>
+	   </pre>
+
+	 datalist
+	   <pre>
+					<label for="sauce">What type of sauce would you like?</label>
+          <input type="text" list="sauces" id="sauce" name="sauce">
+          <!--Add your code below-->
+					<datalist id="sauces">
+            <option> ketchup</option>
+            <option>mayo</option>
+            <option>samurai</option>
+          </datalist>
+	   </pre>
+
+	 textarea
+
+	   <pre>
+          <label for="extra">Anything else you want to add?</label>
+          <br>
+          <!--Add your code below-->
+					<textarea id ="extra" name="extra" rows="3" cols="40">
+            Complete this text
+          </textarea>
+	   </pre>
+
+	 submit
+	   <pre>
+<input type="submit" value="Submit">
+	   </pre>
+        <h2>Form validation</h2>
+	required field
+	   <pre>
+<input type="number" name="guess" id="guess" required>
+	   </pre>
+
+	 min and max
+
+	   <pre>
+<input id="guests" name="guests" type="number" min="1" max="4">
+	   </pre>
+
+	 minlength and maxlength
+	   <pre>
+<input id="summary" name="summary" type="text" minlength="5" maxlength="250" required>
+	   </pre>
+
+	 pattern
+	   <pre>
+<input id="username" name="username" type="text" required minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+">
+	   </pre>
+      </section>
+      <section>
+        <h2>>Accessibility</h2>
+    Using semantic HTML elements whenever possible (such as <header> instead of <div id="header">) will allow screen reader users to navigate your website more efficiently.
+    The role attribute is used to communicate information about the role of specific elements.
+    role="presentation" allows a screen reader to skip markup elements that don’t directly contain useful information.
+    aria-label and other ARIA properties can be used to help users perceive information that is communicated visually but not through text.
+    The alt attribute should be added to every image element (and all other elements that support it) instead of aria-label. When used, its value should be a useful description of the image.
+      </section>
+
+</form>
     </main>
   </body>
 </html>
