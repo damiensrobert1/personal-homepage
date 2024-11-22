@@ -246,5 +246,115 @@ const prom = checkInventory(order)
   .then(handleSuccess)
   .catch(handleFailure);      
       </pre>
+
+      <h2>React JS</h2>
+App.js
+      <pre>
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Talker from './Talker';
+
+function App() {
+  return <Talker />;
+}
+
+export default App;
+      </pre>
+Button.js
+      <pre>
+import React from 'react';
+
+function Button(props) {
+    return (
+      <button onClick={props.onClick}>
+        Click me!
+      </button>
+    );
+}
+
+export default Button;
+      </pre>
+Talker.js
+      <pre>
+import React from 'react';
+import Button from './Button';
+
+function Talker() {
+  function handleClick() {
+    let speech = '';
+    for (let i = 0; i < 10000; i++) {
+      speech += 'blah ';
+    }
+    alert(speech);
+	}
+  return <Button onClick={handleClick}/>;
+}
+
+export default Talker;
+      </pre>
+      <h2>State Hook</h2>
+      <pre>
+// import the default export and the named export `useState` from the 'react' library
+import React, {useState} from 'react';
+
+export default function ColorPicker() {
+  // call useState and assign its return values to `color` and `setColor`
+ const [color, setColor] = useState();
+ const divStyle = {backgroundColor: color};
+
+  return (
+    <div style={divStyle}>
+      <p>The color is {color}</p>
+      <button onClick={() => setColor('Aquamarine')}>
+        Aquamarine
+      </button>
+      <button onClick={() => setColor('BlueViolet')}>
+        BlueViolet
+      </button>
+      <button onClick={() => setColor('Chartreuse')}>
+        Chartreuse
+      </button>
+      <button onClick={() => setColor('CornflowerBlue')}>
+        CornflowerBlue
+      </button>
+    </div>
+  );
+}
+      </pre>
+useState with default value
+      <pre>
+const [color, setColor] = useState("Tomato");
+      </pre>
+useState with objects
+      <pre>
+export default function Login() {
+  const [formState, setFormState] = useState({});
+  const handleChange = ({ target }) => {
+    const { name, value } = target;
+    setFormState((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  return (
+    <form>
+      <input
+        value={formState.firstName}
+        onChange={handleChange}
+        name="firstName"
+        type="text"
+      />
+      <input
+        value={formState.password}
+        onChange={handleChange}
+        type="password"
+        name="password"
+      />
+    </form>
+  );
+}
+      </pre>
   </body>
 </html>
